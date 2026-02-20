@@ -39,7 +39,6 @@ class PostViewController: UIViewController {
             self.tableView.isHidden = true
         }
     }
- 
 }
 
 extension PostViewController: UITableViewDelegate, UITableViewDataSource {
