@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -94,6 +95,72 @@
             </objects>
             <point key="canvasLocation" x="959.5419847328244" y="-27.464788732394368"/>
         </scene>
+        <!--Post Detail View Controller-->
+        <scene sceneID="qFq-Jg-SdK">
+            <objects>
+                <viewController storyboardIdentifier="PostDetailViewController" id="5xp-eO-ekt" customClass="PostDetailViewController" customModule="SyncVault" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iej-F2-ITO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8Z-UC-VE1">
+                                <rect key="frame" x="140.33333333333334" y="94" width="112.33333333333334" height="26.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jaabkascsacasjaabkascsacascsacascjaabkascsacascsacascjaabkascsacascsacasccsacasc" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7b-5t-U8z">
+                                <rect key="frame" x="20" y="149.66666666666666" width="343" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jaabkascsacasjaabkascsacascsacascjaabkascsacascsacascjaabkascsacascsacasccsacasc" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BM9-WL-Miw">
+                                <rect key="frame" x="20" y="204" width="343" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2B-A9-Dny">
+                                <rect key="frame" x="25" y="89.666666666666671" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="TFa-D9-UcP"/>
+                                    <constraint firstAttribute="width" constant="35" id="pFi-aX-qFA"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="arrow.backward" catalog="system" symbolScale="large" renderingMode="template"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="5xp-eO-ekt" eventType="touchUpInside" id="cGG-Ch-YBO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cE0-dv-cJi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BM9-WL-Miw" firstAttribute="trailing" secondItem="c7b-5t-U8z" secondAttribute="trailing" id="1B6-Qi-gwI"/>
+                            <constraint firstItem="BM9-WL-Miw" firstAttribute="top" secondItem="c7b-5t-U8z" secondAttribute="bottom" constant="16" id="8T8-re-ccU"/>
+                            <constraint firstItem="c7b-5t-U8z" firstAttribute="top" secondItem="R2B-A9-Dny" secondAttribute="bottom" constant="25" id="8y7-WR-aYE"/>
+                            <constraint firstItem="R2B-A9-Dny" firstAttribute="centerY" secondItem="x8Z-UC-VE1" secondAttribute="centerY" id="D2s-PE-3PL"/>
+                            <constraint firstItem="x8Z-UC-VE1" firstAttribute="centerX" secondItem="Iej-F2-ITO" secondAttribute="centerX" id="Esa-A2-43h"/>
+                            <constraint firstItem="BM9-WL-Miw" firstAttribute="leading" secondItem="c7b-5t-U8z" secondAttribute="leading" id="MrX-S9-FLH"/>
+                            <constraint firstAttribute="trailing" secondItem="c7b-5t-U8z" secondAttribute="trailing" constant="30" id="WEd-VT-qgY"/>
+                            <constraint firstItem="c7b-5t-U8z" firstAttribute="leading" secondItem="Iej-F2-ITO" secondAttribute="leading" constant="20" id="YTP-OD-51S"/>
+                            <constraint firstItem="R2B-A9-Dny" firstAttribute="leading" secondItem="cE0-dv-cJi" secondAttribute="leading" constant="25" id="eNR-EZ-EsP"/>
+                            <constraint firstItem="x8Z-UC-VE1" firstAttribute="top" secondItem="cE0-dv-cJi" secondAttribute="top" constant="35" id="zHL-T9-cxe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblBody" destination="BM9-WL-Miw" id="RKT-Gk-AOi"/>
+                        <outlet property="lbltitle" destination="c7b-5t-U8z" id="jJY-eG-18K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="An6-Na-dAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1730.534351145038" y="-27.464788732394368"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="WEM-o4-kRC">
             <objects>
@@ -113,6 +180,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

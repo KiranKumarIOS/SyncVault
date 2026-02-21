@@ -64,11 +64,12 @@ class PostViewController: UIViewController {
     func bindViewModel(){
         viewModel.onDataUpdated = { [weak self] in
             guard let self = self else { return }
-            
-            self.refreshControl.endRefreshing()
-            self.errorLabel.isHidden = true
-            self.tableView.isHidden = false
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.refreshControl.endRefreshing()
+                self.errorLabel.isHidden = true
+                self.tableView.isHidden = false
+                self.tableView.reloadData()
+            }
         }
         
         viewModel.onError = { [weak self] message in
@@ -117,6 +118,14 @@ extension PostViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedPost = isSearching ? filteredPosts[indexPath.row] : viewModel.posts[indexPath.row]
+        
+        let nextVC = storyboard?.instantiateViewController(withIdentifier: "PostDetailViewController") as! PostDetailViewController
+        nextVC.selectedPost = selectedPost
+        self.navigationController?.pushViewController(nextVC, animated: false)
     }
     
 }

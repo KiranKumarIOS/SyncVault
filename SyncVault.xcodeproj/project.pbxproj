@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19AA10C72F49C421002C40CD /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA10C62F49C421002C40CD /* PostDetailViewController.swift */; };
 		19CBFCBB2F482C1A00396733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBFCBA2F482C1A00396733 /* AppDelegate.swift */; };
 		19CBFCBD2F482C1A00396733 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBFCBC2F482C1A00396733 /* SceneDelegate.swift */; };
 		19CBFCC22F482C1A00396733 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CBFCC02F482C1A00396733 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19AA10C62F49C421002C40CD /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		19CBFCB72F482C1A00396733 /* SyncVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SyncVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CBFCBA2F482C1A00396733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19CBFCBC2F482C1A00396733 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				19CBFCD12F482D6700396733 /* PostViewController.swift */,
+				19AA10C62F49C421002C40CD /* PostDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19CBFCEA2F48401D00396733 /* PostViewModel.swift in Sources */,
+				19AA10C72F49C421002C40CD /* PostDetailViewController.swift in Sources */,
 				19CBFCE02F48351600396733 /* APIManager.swift in Sources */,
 				19CBFCD62F482E9B00396733 /* PostEntity+CoreDataProperties.swift in Sources */,
 				19CBFCBB2F482C1A00396733 /* AppDelegate.swift in Sources */,
