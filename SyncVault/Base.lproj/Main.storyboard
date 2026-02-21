@@ -18,8 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ahj-2g-Z4l">
-                                <rect key="frame" x="15" y="89" width="363" height="729"/>
+                                <rect key="frame" x="15" y="159" width="363" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCell" textLabel="ERh-Nc-NCG" detailTextLabel="UaW-2P-W7k" style="IBUITableViewCellStyleSubtitle" id="iUr-9K-rHl">
                                         <rect key="frame" x="0.0" y="50" width="363" height="43.666667938232422"/>
@@ -57,21 +58,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="S2g-IB-pVx">
+                                <rect key="frame" x="15" y="89" width="363" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lYe-2X-oIs"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Qmt-wu-0oC"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ahj-2g-Z4l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="7Ij-oO-eI5"/>
+                            <constraint firstItem="S2g-IB-pVx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="FDw-3x-mq6"/>
+                            <constraint firstItem="S2g-IB-pVx" firstAttribute="leading" secondItem="Ahj-2g-Z4l" secondAttribute="leading" id="G8a-rp-QfS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ahj-2g-Z4l" secondAttribute="trailing" constant="15" id="WzI-Da-fyo"/>
                             <constraint firstItem="WQD-YJ-Rlb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZoV-g7-vgp"/>
+                            <constraint firstItem="S2g-IB-pVx" firstAttribute="trailing" secondItem="Ahj-2g-Z4l" secondAttribute="trailing" id="aGD-Gb-bTp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ahj-2g-Z4l" secondAttribute="bottom" id="bQz-8r-ZbK"/>
                             <constraint firstItem="WQD-YJ-Rlb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eZF-0C-fcR"/>
-                            <constraint firstItem="Ahj-2g-Z4l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="jGK-VL-CPw"/>
+                            <constraint firstItem="Ahj-2g-Z4l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="jGK-VL-CPw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g80-6z-45Y"/>
                     <connections>
                         <outlet property="errorLabel" destination="WQD-YJ-Rlb" id="nVL-Hr-XPA"/>
+                        <outlet property="searchBar" destination="S2g-IB-pVx" id="gvc-dR-uCh"/>
                         <outlet property="tableView" destination="Ahj-2g-Z4l" id="sEi-2l-dTp"/>
                     </connections>
                 </viewController>

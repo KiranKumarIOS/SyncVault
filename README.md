@@ -6,9 +6,19 @@ Offline-First iOS Application built using MVVM Architecture.
 
 - Fetch posts from API
 - Offline support using Core Data
-- Automatic fallback when network fails
-- Clean MVVM architecture
-- Repository pattern implementation
+- Pull-to-refresh functionality
+- Activity indicator while loading
+- Local search by post title
+- Empty state handling (No Results Found)
+- Network error handling
+- MVVM architecture
+
+## 🔍 Search Behavior
+
+- Filters posts locally
+- Displays “No Results Found” when no matches
+- Restores full list when search is cleared
+
 
 ## 🛠 Tech Stack
 

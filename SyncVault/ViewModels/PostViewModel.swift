@@ -16,8 +16,12 @@ final class PostViewModel {
     
     var onDataUpdated: (() -> Void)?
     var onError: ((String) -> Void)?
+    var onLoading: ((Bool) -> Void)?
     
     func fetchPosts() {
+        onLoading?(true)
+        defer { onLoading?(false) }
+
         Task {
             do {
                 let data = try await repository.fetchPosts()
