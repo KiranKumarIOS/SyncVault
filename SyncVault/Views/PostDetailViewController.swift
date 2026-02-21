@@ -21,7 +21,8 @@ class PostDetailViewController: UIViewController {
         setupUI()
         view.backgroundColor = .systemBackground
     }
-    private func setupUI() {
+    
+     func setupUI() {
         lbltitle.font = .boldSystemFont(ofSize: 24)
         lbltitle.numberOfLines = 0
         
